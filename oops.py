@@ -1,7 +1,12 @@
 """ Procedure Oriented: Programs which flow from top to bottom, which are 
 compiled are known as function oriented programs
+
+
 Object Oriented: Flows from bottom to top,an instance has to be created
 and called, this procedure is known as object oriented.
+
+
+
 class Student:
 	name = 'Jango'
 	age = 23
@@ -83,15 +88,12 @@ class Bird:
         self.colour = colour
         self.span = span
 
-    # def display(self,country):
-    #     self.country = country
-    #     return f'{self.name} is from {country}'
     def display(self,country):
-        self.country = 'india'
-        return f'{self.name} is from {self.country}'
+        
+        return f'{self.name} is from {country}'
 
     def diet(self,prey):
-        return f'{self.name} from {self.country}  eats {prey}'
+        return f'{self.name} from {country}  eats {prey}'
 auto = Bird('Eagle','Brown',1)
 
 print(auto.display('India'))
@@ -105,3 +107,9 @@ class Paint:
         print(self)
         print(self.name)
         print('Constructor is defined')
+
+p = Paint('Red')
+print('Done !')
+p.__init__('Violet')
+
+print('Done')

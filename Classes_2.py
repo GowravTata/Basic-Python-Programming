@@ -1,55 +1,43 @@
-# Instance Variables
+# In the Constructor method __init__ should be used
 
 class Carpet:
+    def __init__(self,place,colour,life):
+        self.place = place
+        self.colour = colour
+        self.life = life
+        print(f'I want {self.place}')
+    def Coating(self,desired):
+        self.desired = desired
+        print(self.place)
+
+# my_carpet = Carpet('Kurnool','Dark Blue',14)
+
+# print(my_carpet)
+
+# my_carpet.Coating('Blue')
+
+# Instance Variables
+
+# For every object , we are initially passing variables they are 
+# known as Instance Variables
+
+class Seeds:
     # Constructor Method
-    def __init__(self,name,place,colour):
+    def __init__(self,name,activity):
         self.name = name
-        self.place=place
-        self.colour=colour
+        self.activity=activity
     # Instance Method
-    def desire(self,new_colour):
-        print(f'First Colour picked was {self.colour}')
-        self.new_colour = new_colour
-        print(f'Desired Colour was {self.colour}')
-    
-# shona = Carpet('Dash','Belgium','Saddle')
+    def Place(self,place):
+        self.place = place
+        return f'These are present near {place}'
 
-# shona.desire('Plum')
+first = Seeds('Popping Pod','Pop')
+print(f'Address of first is {id(first)}')
+second = Seeds('Date','Growth')
+print(f'Address of Second is {id(second)}')
 
-# An object is an instance of class
-
-class Target:
-    def skip(self):
-        print('Dash to moon in one leap !')
-# Here moon is an instance of the class Target
-# moon = Target()
-# moon.skip()
+third = Seeds('Popping Pod','Pop')
+print(f'Address of third is {id(third)}')
 
 
-class Automobile:
-    vehicle_type = 'Personal'
-    # Constructor Methods
-    def __init__(self,name,speed,CC,people):
-        self.name=name
-        self.speed = speed
-        self.CC=CC
-        self.people=people
-    # Instance Methods
-    """ I attached a nitro system to my car
-    this would boost my car's speed by 50 %  """
-    def Nitro(self):
-        boost = 1.5
-        return f'This would turn my car to zip at {self.speed*1.5} KMPH'
-
-mobile1 = Automobile('Needle',240,'3400',4)
-#print(mobile1.Nitro())
-
-# To view the assigned values as key and pair we can do it by
-#print(mobile1.__dict__)
-
-# print(mobile1.__init__('Tail',360,456,3)) # Calling it explicitly from the instance overrides the created instance
-
-# print(mobile1.Nitro()) # This would turn my car to zip at 540.0 KMPH
-
-# Calling the static variable from the class instance
-# print(mobile1.vehicle_type)
+print(first.Place('Ponds'))
